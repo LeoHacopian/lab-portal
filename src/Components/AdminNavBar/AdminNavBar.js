@@ -1,9 +1,13 @@
 import './AdminNavBar.css'
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faHouse} from '@fortawesome/free-solid-svg-icons'
 
 export default function AdminNavBar() {
+    const location = useLocation();
+    const isLoggedOut = location.pathname === '/'
+    
+    if (!isLoggedOut) {
     return (
         <div className="Admin-NavBar">
             <div className="Admin-NavBar-Items">
@@ -19,4 +23,5 @@ export default function AdminNavBar() {
             </div>
         </div>  
     )
+    }
 }

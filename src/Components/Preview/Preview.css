@@ -28,3 +28,7 @@
 .RadioButton-Input {
     margin-right: 5px;
 }
+
+Select {
+    text: #000;
+}

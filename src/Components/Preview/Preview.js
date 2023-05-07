@@ -8,7 +8,7 @@ function renderFormField(question,sliderValue, setSliderValue) {
       return (
        <input type="text"/>
       );
-    case 'Checkbox':
+    case 'Radio Button':
       return (
         <div >
           {question.answers.map((answer) => (
